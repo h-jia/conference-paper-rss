@@ -4,6 +4,8 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 from paper_parser import Paper
 from paper_parser.nips import PaperListParser
+import pdb
+
 class PaperListParser:
     def __init__(self,args):
         if args.year==2020:
@@ -12,7 +14,7 @@ class PaperListParser:
             self.worker=PaperListParserCC(args)
         for func in ['parse','parse_paper_list','cook_paper']:
             setattr(self,func,getattr(self.worker,func))
-    
+
 class PaperListParserCC(PaperListParser):
     def __init__(self, args):
         super().__init__(args)
@@ -57,29 +59,33 @@ def read_page(url,delay=30):
     page=browser.page_source
     browser.close()
     return page
+
 class PaperListParserOPEN(BasePaperListParser):
     def __init__(self, args):
         ts=['poster','spotlight','talk']
         self.base_urls = ["https://openreview.net/group?id=ICLR.cc/{}/Conference#accept-{}".format(args.year,t) for t in ts]
         self.website_url = "https://openreview.net"
+
     def getinfo(self,d):
         author=d.select('div.note-authors')[0].get_text().strip()
         title=d.select('h4')[0].get_text().strip()
+        pdf = d.select('[class="pdf-link"]')[0]['href'] # for accepted paper
         details=d.select('ul[class="list-unstyled note-content"]')[0].select('li')
         for x in details:
             if x.strong.text=='Abstract:':
                 abstract=x.span.get_text()
-            if x.strong.text=='Original Pdf:':
-                pdf=x.span.a['href']
+            # if x.strong.text=='Original Pdf:':
+            #     pdf=x.span.a['href']
 
         return title,abstract,pdf,author
-   
+
     def parse_paper_list(self, args):
         paper_list=[]
         for url in self.base_urls:
             page=read_page(url)
             paper_list.extend(self.parse(BeautifulSoup(page,features="html.parser")))
         return paper_list
+
     def parse(self, soup):
         table_contents=soup.select('.tab-content')[0].select('div[class="tab-pane fade active in"]')
         lis=table_contents[0].select('li.note')
@@ -96,7 +102,7 @@ class PaperListParserOPEN(BasePaperListParser):
                     fail+=1
                     print(e)
                 t.set_postfix(succ=succ,fail=fail)
-        return paper_list
+                return paper_list
 
     def cook_paper(self, paper_info):
         title,abstract,pdf,author=paper_info
