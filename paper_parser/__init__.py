@@ -11,13 +11,13 @@ class BasePaperListParser(object):
     """
     def __init__(self, url):
         self.base_url = None
-    
+
     def parse(self, soup):
         raise NotImplementedError()
 
     def parse_paper_list(self, args):
         base_url = self.base_url
-        print(base_url)        
+        print(base_url)
         content = urlopen(base_url).read()
         soup = BeautifulSoup(content, features="html.parser")
         paper_list = self.parse(soup)
