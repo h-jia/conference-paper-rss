@@ -8637,10 +8637,8 @@
     
     <item>
         <title>Adaptive Checkpoint Adjoint Method for Gradient Estimation in Neural ODE</title>
-        <link>http://proceedings.mlr.press/v119/zhuang20a/zhuang20a.pdf</link>
-        <description>
-    The empirical performance of neural ordinary differential equations (NODEs) is significantly inferior to discrete-layer models on benchmark tasks (e.g. image classification). We demonstrate an explanation is the inaccuracy of existing gradient estimation methods: the adjoint method has numerical errors in reverse-mode integration; the naive method suffers from a redundantly deep computation graph. We propose the Adaptive Checkpoint Adjoint (ACA) method: ACA applies a trajectory checkpoint strategy which records the forward- mode trajectory as the reverse-mode trajectory to guarantee accuracy; ACA deletes redundant components for shallow computation graphs; and ACA supports adaptive solvers. On image classification tasks, compared with the adjoint and naive method, ACA achieves half the error rate in half the training time; NODE trained with ACA outperforms ResNet in both accuracy and test-retest reliability. On time-series modeling, ACA outperforms competing methods. Furthermore, NODE with ACA can incorporate physical knowledge to achieve better accuracy.
-  </description>
+        <link>http://proceedings.mlr.press/v119/</link>
+        <description>HTTP Error 503: Service Unavailable</description>
     </item>
     
     <item>

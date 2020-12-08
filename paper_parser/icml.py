@@ -44,7 +44,8 @@ class PaperListParser(BasePaperListParser):
             page_content = urlopen(paper_info[1]).read().decode('utf8')
             soup = BeautifulSoup(page_content, features="html.parser")
             # author_list = re.split('\n+\s+', re.sub(',|;', '', soup.select('#authors')[0].get_text()))[1:-1]
-            author_list = soup.find_all('span', 'authors')[0].get_text().split(',\xa0')
+            # author_list = soup.find_all('span', 'authors')[0].get_text().split(',\xa0')
+            author_list = soup.select('span.authors')[0].get_text().split(',\xa0')
             author_list = [self.text_process(x) for x in author_list]
             abstract = self.text_process(soup.select('#abstract')[0].get_text())
             pdf_url = next(filter(lambda x: 'Download PDF' in x.get_text(), soup.select('a'))).get('href')
