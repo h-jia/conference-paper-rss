@@ -12,6 +12,8 @@ class PaperListParser(BasePaperListParser):
         super().__init__(args)
         self.website_url = "http://proceedings.mlr.press/"
         year_to_suffix = {
+            2016: "v48/",
+            2017: "v70/",
             2018: "v80/",
             2019: "v97/",
             2020: "v119/"
