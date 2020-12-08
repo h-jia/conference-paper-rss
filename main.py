@@ -4,6 +4,7 @@ import importlib
 import tqdm
 
 import generator
+from lxml import etree
 import pdb
 
 def sanitize_text(data):
@@ -27,6 +28,12 @@ def sanitize_text(data):
     data = ''.join([c for c in data if ord(c) < 127])
     return data.encode('utf-8', 'xmlcharreplace')
 
+def sanitize_text_v2(data):
+    my_parser = etree.XMLParser(recover=True)
+    xml = etree.fromstring(bytes(data, encoding='utf-8'), parser=my_parser)
+    data = etree.tostring(xml)
+    return data
+
 def main(args):
     # first, we construct a paper parser
     try:
@@ -45,7 +52,10 @@ def main(args):
     # Finally, generate output to a file
     _generator = getattr(generator, 'generate_%s_page' % (args.outputformat))
     content_page = _generator(cooked_paper_list, args)
-    content_page = sanitize_text(content_page)
+    # content_page = sanitize_text(content_page)
+    # with open('%s_source/' % (args.outputformat) + args.conference + str(args.year) + '.xml', 'w', encoding='utf8') as f:
+    #     f.write(content_page.decode(encoding='UTF-8'))
+    content_page = sanitize_text_v2(content_page)
     with open('%s_source/' % (args.outputformat) + args.conference + str(args.year) + '.xml', 'w', encoding='utf8') as f:
         f.write(content_page.decode(encoding='UTF-8'))
 
