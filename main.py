@@ -6,6 +6,27 @@ import tqdm
 import generator
 import pdb
 
+def sanitize_text(data):
+    print('type(data): {}'.format(type(data)))
+    replace_with = {
+        u'\u2018': '\'',
+        u'\u2019': '\'',
+        u'\u201c': '"',
+        u'\u201d': '"'
+    }
+
+    bad_chars = [c for c in data if ord(c) >= 127]
+    if bad_chars:
+        print('INVALID CHARACTERS: {}'.format(bad_chars))
+    else:
+        print('INVALID CHARACTERS: {}'.format(bad_chars))
+
+    for uni_char in replace_with.keys():
+        data = data.replace(uni_char, replace_with.get(uni_char))
+
+    data = ''.join([c for c in data if ord(c) < 127])
+    return data.encode('utf-8', 'xmlcharreplace')
+
 def main(args):
     # first, we construct a paper parser
     try:
@@ -24,8 +45,9 @@ def main(args):
     # Finally, generate output to a file
     _generator = getattr(generator, 'generate_%s_page' % (args.outputformat))
     content_page = _generator(cooked_paper_list, args)
+    content_page = sanitize_text(content_page)
     with open('%s_source/' % (args.outputformat) + args.conference + str(args.year) + '.xml', 'w', encoding='utf8') as f:
-        f.write(content_page)
+        f.write(str(content_page))
 
 
 if __name__ == "__main__":
