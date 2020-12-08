@@ -47,7 +47,7 @@ def main(args):
     content_page = _generator(cooked_paper_list, args)
     content_page = sanitize_text(content_page)
     with open('%s_source/' % (args.outputformat) + args.conference + str(args.year) + '.xml', 'w', encoding='utf8') as f:
-        f.write(str(content_page))
+        f.write(content_page.decode(encoding='UTF-8'))
 
 
 if __name__ == "__main__":
