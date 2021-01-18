@@ -27,6 +27,7 @@ Use any rss reading client (Leaf in Mac) to subscribe to the following rss resou
   + https://lbzhang.github.io/conference-paper-rss/rss_source/icml2018.xml
 
 + ICLR:
+  + https://lbzhang.github.io/conference-paper-rss/rss_source/iclr2021.xml
   + https://lbzhang.github.io/conference-paper-rss/rss_source/iclr2020.xml
   + https://lbzhang.github.io/conference-paper-rss/rss_source/iclr2019.xml
   + https://lbzhang.github.io/conference-paper-rss/rss_source/iclr2018.xml
@@ -56,3 +57,4 @@ Use any rss reading client (Leaf in Mac) to subscribe to the following rss resou
  - Add support for the new sits of NeurIPS processings including 2020, 2019, ....  
  - Add support for ICML 2020  
  - Update pdf url in ICLR 2020  
+ - add support for ICLR 2021
