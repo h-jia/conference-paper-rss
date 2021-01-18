@@ -8,7 +8,7 @@ import pdb
 
 class PaperListParser:
     def __init__(self,args):
-        if args.year==2020:
+        if args.year in [2020, 2021]:
             self.worker=PaperListParserOPEN(args)
         else:
             self.worker=PaperListParserCC(args)
@@ -64,6 +64,8 @@ class PaperListParserOPEN(BasePaperListParser):
     def __init__(self, args):
         ts=['poster','spotlight','talk']
         self.base_urls = ["https://openreview.net/group?id=ICLR.cc/{}/Conference#accept-{}".format(args.year,t) for t in ts]
+        if args.year == 2021:
+            self.base_urls = ["https://openreview.net/group?id=ICLR.cc/{}/Conference#{}-presentations".format(args.year, t) for t in ts]
         self.website_url = "https://openreview.net"
 
     def getinfo(self,d):
