@@ -1,0 +1,24 @@
+<rss version="2.0">
+<channel>
+    <title>iclr 2021</title>
+    
+    <item>
+        <title>Revisiting Dynamic Convolution via Matrix Decomposition</title>
+        <link>https://openreview.net/pdf?id=YwpZmcAehZ</link>
+        <description>Recent research in dynamic convolution shows substantial performance boost for efficient CNNs, due to the adaptive aggregation of K static convolution kernels.It has two limitations: (a) it increases the number of convolutional weights by K-times, and (b) the joint optimization of dynamic attention and static convolution kernels is challenging.  In this paper, we revisit it from a new perspective of matrix decomposition and reveal the key issue is that dynamic convolution applies dynamic attentions over channel groups after projecting into a higher dimensional intermediate space.   To address this issue,  we propose dynamic channel fusion to replace dynamic attentions over channel groups.  Dynamic channel fusion not only enables significant dimension reduction of the intermediate space, but also mitigates the joint optimization difficulty. As a result, our method is easier to train and requires significantly fewer parameters without sacrificing accuracy.</description>
+    </item>
+    
+    <item>
+        <title>Sparse Quantized Spectral Clustering</title>
+        <link>https://openreview.net/pdf?id=pBqLS-7KYAF</link>
+        <description>Given a large data matrix, sparsifying, quantizing, and/or performing other entry-wise nonlinear operations can have numerous benefits, ranging from speeding up iterative algorithms for core numerical linear algebra problems to providing nonlinear filters to design state-of-the-art neural network models. Here, we exploit tools from random matrix theory to make precise statements about how the eigenspectrum of a matrix changes under such nonlinear transformations. In particular, we show that very little change occurs in the informative eigenstructure even under drastic sparsification/quantization, and consequently, that very little downstream performance loss occurs with very aggressively sparsified or quantized spectral clustering. We illustrate how these results depend on the nonlinearity, we characterize a phase transition beyond which spectral clustering becomes possible, and we show when such nonlinear transformations can introduce spurious non-informative eigenvectors.</description>
+    </item>
+    
+    <item>
+        <title>What Matters for On-Policy Deep Actor-Critic Methods? A Large-Scale Study</title>
+        <link>https://openreview.net/pdf?id=nIAxjsniDzg</link>
+        <description>In recent years, reinforcement learning (RL) has been successfully applied to many different continuous control tasks. While RL algorithms are often conceptually simple, their state-of-the-art implementations take numerous low- and high-level design decisions that strongly affect the performance of the resulting agents. Those choices are usually not extensively discussed in the literature, leading to discrepancy between published descriptions of algorithms and their implementations. This makes it hard to attribute progress in RL and slows down overall progress [Engstrom'20]. As a step towards filling that gap, we implement &gt;50 such ``"choices" in a unified on-policy deep actor-critic framework, allowing us to investigate their impact in a large-scale empirical study. We train over 250'000 agents in five continuous control environments of different complexity and provide insights and practical recommendations for the training of on-policy deep actor-critic RL agents.</description>
+    </item>
+    
+</channel>
+</rss>
