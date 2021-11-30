@@ -16,6 +16,7 @@ You can use **any RSS reader** to subscribe our resource. In Mac, we recommend u
 Use any rss reading client (Leaf in Mac) to subscribe to the following rss resource.
 > Currently, we parse papers from the most recent 2 years. earlier years are not included (but you can run our code to parse it by yourself).
 + NIPS:
+  + https://h-jia.github.io/rss/nips2021.xml
   + https://lbzhang.github.io/conference-paper-rss/rss_source/nips2020.xml
   + https://lbzhang.github.io/conference-paper-rss/rss_source/nips2019.xml
   + https://lbzhang.github.io/conference-paper-rss/rss_source/nips2018.xml
