@@ -1,0 +1,277 @@
+<rss version="2.0">
+<channel>
+    <title>mlsys 2020</title>
+    
+    <item>
+        <title>Resource Elasticity in Distributed Deep Learning</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/006f52e9102a8d3be2fe5614f42ba989-Paper.pdf</link>
+        <description>Elasticity&#8212;scaling out or in depending upon resource demand or availability&#8212;allows a system to improve its efficiency or performance. This leads to potentially significant cost savings and shorter job completion times. However, elasticity is not possible in today's distributed deep learning deployments, in large part because the most widely used frameworks such as TensorFlow are built assuming that resource allocation must be fixed throughout the lifetime of the job.</description>
+    </item>
+    
+    <item>
+        <title>MLPerf Training Benchmark</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/02522a2b2726fb0a03bb19f2d8d9524d-Paper.pdf</link>
+        <description>Machine learning is experiencing an explosion of software and hardware solutions, and needs industry-standard performance benchmarks to drive design and enable competitive evaluation. However, machine learning training presents a number of unique challenges to benchmarking that do not exist in other domains: (1) some optimizations that improve training throughput actually increase time to solution, (2) training is stochastic and time to solution has high variance, and (3) the software and hardware systems are so diverse that they cannot be fairly benchmarked with the same binary, code, or even hyperparameters. We present MLPerf, a machine learning benchmark that overcomes these challenges. We quantitatively evaluate the efficacy of MLPerf in driving community progress on performance and scalability across two rounds of results from multiple vendors.</description>
+    </item>
+    
+    <item>
+        <title>Checkmate: Breaking the Memory Wall with Optimal Tensor Rematerialization</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/084b6fbb10729ed4da8c3d3f5a3ae7c9-Paper.pdf</link>
+        <description>Modern neural networks are increasingly bottlenecked by the limited capacity of on-device GPU memory. Prior work explores dropping activations as a strategy to scale to larger neural networks with fixed memory. However, these heuristics assume uniform cost per layer and only consider simple linear chain architectures, limiting their usability. In this paper, we formalize the problem of trading-off computation time and memory requirements for DNN training as the tensor rematerialization optimization problem. We develop a new system to optimally solve the problem in reasonable times (under an hour) using off-the-shelf MILP solvers. These schedules subsequently accelerate millions of training iterations. Our optimization pass in TensorFlow 2.0 automatically yields real training speedups of up to 4.8x over prior work, and can enable up to 5x increase in input size for real-world large networks.</description>
+    </item>
+    
+    <item>
+        <title>Automatically batching control-intensive programs for modern accelerators</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/140f6969d5213fd0ece03148e62e461e-Paper.pdf</link>
+        <description>We present a general approach to batching arbitrary computations for accelerators such as GPUs.  We show orders-of-magnitude speedups using our method on the No U-Turn Sampler (NUTS), a workhorse algorithm in Bayesian statistics.  The central challenge of batching NUTS and other Markov chain Monte Carlo algorithms is data-dependent control flow and recursion.  We overcome this by mechanically transforming a single-example implementation into a form that explicitly tracks the current program point for each batch member, and only steps forward those in the same place.  We present two different batching algorithms: a simpler, previously published one that inherits recursion from the host Python, and a more complex, novel one that implemenents recursion directly and can batch across it. We implement these batching methods as a general program transformation on Python source.  Both the batching system and the NUTS implementation presented here are available as part of the popular TensorFlow Probability software package.</description>
+    </item>
+    
+    <item>
+        <title>PLink: Discovering and Exploiting Locality for Accelerated Distributed Training on the public Cloud</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/182be0c5cdcd5072bb1864cdee4d3d6e-Paper.pdf</link>
+        <description>Training deep learning models has become an important workload on the public cloud. Scaling cloud-based distributed training faces unique challenges from the hierarchical network topology of the datacenter and the dynamic nature of the multi-tenant environment. Timely training of deep learning models requires effective use of topology-induced locality in the datacenter network. This work proposes PLink, an optimized communication library that probes the physical network and then generates and executes a fitted hierarchical aggregation plan to take advantage of such locality, and evolves the plan to adapt to changing network conditions. PLink needs no support from cloud providers and operates out-of-the-box on unmodified public clouds. PLink serves as a direct plug-in to many training frameworks, delivering up to 2.3x better end-to-end training throughput for popular DL models on Azure and EC2 compared to the state of the art.</description>
+    </item>
+    
+    <item>
+        <title>Attention-based Learning for Missing Data Imputation in HoloClean</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/202cb962ac59075b964b07152d234b70-Paper.pdf</link>
+        <description>We study the problem of missing data imputation, a data validation task that machine learning researchers and practitioners confront regularly. We focus on mixed (discrete and continuous) data and introduce AimNet, an attention-based learning network for missing data imputation. AimNet utilizes a variation of the dot product attention mechanism to learn interpretable, structural properties of the mixed data distribution and relies on the learned structure to perform imputation. We perform an extensive experimental study over 14 real-world data sets to understand the role of attention and structure on data imputation. We find that the simple attention-based architecture of AimNet outperforms state-of-the-art baselines, such as ensemble tree models and deep learning architectures (e.g., generative adversarial networks), by up to 43% in accuracy on discrete values and up to 26.7% in normalized-RMS error on continuous values. A key finding of our study is that, by learning the structure of the underlying distribution, the attention mechanism can generalize better on systematically-missing data where imputation requires reasoning about functional relationships between attributes.</description>
+    </item>
+    
+    <item>
+        <title>Riptide: Fast End-to-End Binarized Neural Networks</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/2a79ea27c279e471f4d180b08d62b00a-Paper.pdf</link>
+        <description>Binarized neural networks have attracted much recent attention due to their promise of making convolutional neural networks fast and compact. However, these benefits have proven hard to realize in practice. In this paper, we identify the underlying barriers to high performance and propose solutions from missing implementations for certain operations to carefully scheduled library support for binarized linear algebra operations. The combination of these innovations allows us to report the first measured end-to-end speedups for binarized networks. For instance, we show a 6.3_ speedup over a standard VGGNet variant at state-of-the-art (64.2% for top-1 binarized classification of ImageNet) accuracy. More broadly speedups range from 4-12_ and the techniques we propose are crucial to achieving them.</description>
+    </item>
+    
+    <item>
+        <title>PoET-BiN: Power Efficient Tiny Binary Neurons</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/35f4a8d465e6e1edc05f3d8ab658c551-Paper.pdf</link>
+        <description>The success of neural networks in image classification has inspired various hardware implementations on embedded platforms such as Field Programmable Gate Arrays, embedded processors and Graphical Processing Units. These embedded platforms are constrained in terms of power, which is mainly consumed by the Multiply Accumulate operations and the memory accesses for weight fetching. Quantization and pruning have been proposed to address this issue. Though effective, these techniques do not take into account the underlying architecture of the embedded hardware. In this work, we propose PoET-BiN, a Look-Up Table based power efficient implementation on resource constrained embedded devices. A modified Decision Tree approach forms the backbone of the proposed implementation in the binary domain. A LUT access consumes far less power than the equivalent Multiply Accumulate operation it replaces, and the modified Decision Tree algorithm eliminates the need for memory accesses. We applied the PoET-BiN architecture to implement the classification layers of networks trained on MNIST, SVHN and CIFAR-10 datasets, with near state-of-the art results. The energy reduction for the classifier portion reaches up to six orders of magnitude compared to a floating point implementations and up to three orders of magnitude when compared to recent binary quantized neural networks.</description>
+    </item>
+    
+    <item>
+        <title>Federated Optimization in Heterogeneous Networks</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/38af86134b65d0f10fe33d30dd76442e-Paper.pdf</link>
+        <description>Federated Learning is a distributed learning paradigm with two key challenges that differentiate it from traditional distributed optimization: (1) significant variability in terms of the systems characteristics on each device in the network (systems heterogeneity), and (2) non-identically distributed data across the network (statistical heterogeneity). In this work, we introduce a framework, FedProx, to tackle heterogeneity in federated networks. FedProx can be viewed as a generalization and re-parametrization of FedAvg, the current state-of-the-art method for federated learning. While this re-parameterization makes only minor modifications to the method itself, these modifications have important ramifications both in theory and in practice. Theoretically, we provide convergence guarantees for our framework when learning over data from non-identical distributions (statistical heterogeneity), and while adhering to device-level systems constraints by allowing each participating device to perform a variable amount of work (systems heterogeneity). Practically, we demonstrate that FedProx allows for more robust convergence than FedAvg across a suite of realistic federated datasets. In particular, in highly heterogeneous settings, FedProx demonstrates significantly more stable and accurate convergence behavior relative to FedAvg&#8212;improving absolute test accuracy by 18.8% on average.</description>
+    </item>
+    
+    <item>
+        <title>MotherNets: Rapid Deep Ensemble Learning</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/3ef815416f775098fe977004015c6193-Paper.pdf</link>
+        <description>Ensembles of deep neural networks significantly improve generalization accuracy. However, training neural network ensembles requires a large amount of computational resources and time. State-of-the-art approaches either train all networks from scratch leading to prohibitive training cost or generate ensembles by training a monolithic architecture resulting in lower diversity and accuracy. We propose MotherNets to address these shortcomings: A MotherNet captures the structural similarity across different members of a deep neural network ensemble. To train an ensemble, we first train a single or a small set of MotherNets and subsequently, their function is transferred to all members of the ensemble. Then, we continue to train the ensemble networks, which converge significantly faster compared to training from scratch. MotherNets can handle ensembles with diverse architectures by clustering ensemble networks of similar architecture and training a separate MotherNet for every cluster. MotherNets also use clustering to balance the accuracy vs. training cost tradeoff. We show that compared to state-of-the-art approaches such as Snapshot ensembles, knowledge distillation, and TreeNets, MotherNets can achieve better accuracy given the same time budget or alternatively that MotherNets can achieve the same accuracy as state-of-the-art approaches at a fraction of the training time.  Overall, we demonstrate that MotherNets bring not only performance and accuracy improvements but a new powerful way to balance the training cost vs. accuracy tradeoff and we verify these benefits over numerous state-of-the-art neural network architectures. </description>
+    </item>
+    
+    <item>
+        <title>Privacy-Preserving Bandits</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/42a0e188f5033bc65bf8d78622277c4e-Paper.pdf</link>
+        <description>Contextual bandit algorithms~(CBAs) often rely on personal data to provide recommendations. Centralized CBA agents utilize potentially sensitive data from recent interactions to provide personalization to end-users. Keeping the sensitive data locally, by running a local agent on the user's device, protects the user's privacy, however, the agent requires longer to produce useful recommendations, as it does not leverage feedback from other users.</description>
+    </item>
+    
+    <item>
+        <title>Blink: Fast and Generic Collectives for Distributed ML</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/43ec517d68b6edd3015b3edc9a11367b-Paper.pdf</link>
+        <description>Model parameter synchronization across GPUs introduces high overheads for data-parallel training at scale. Existing parameter synchronization protocols cannot effectively leverage available network resources in the face of ever increasing hardware heterogeneity. To address this issue, we propose Blink, a collective communication library that dynamically generates optimal communication primitives by packing spanning trees. We propose techniques to minimize the number of trees generated and extend Blink to leverage heterogeneous communication channels for hybrid, and faster, data transfers. Evaluations show that compared to the state-of-the-art (NCCL), Blink can achieve up to 8&#215; faster model synchronization (AllReduce), and reduce end-to-end DNN training time for image classification tasks by up to 40%.</description>
+    </item>
+    
+    <item>
+        <title>Searching for Winograd-aware Quantized Networks</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/45c48cce2e2d7fbdea1afc51c7c6ad26-Paper.pdf</link>
+        <description>Lightweight architectural designs of Convolutional Neural Networks (CNNs) together with quantization have paved the way for the deployment of demanding computer vision applications on mobile devices. Parallel to this, alternative formulations to the convolution operation such as FFT, Strassen and Winograd, have been adapted for use in CNNs offering further speedups. Winograd convolutions are the fastest known algorithm for spatially small convolutions, but exploiting their full potential comes with the burden of numerical error, rendering them unusable in quantized contexts. In this work we propose a Winograd-aware formulation of convolution layers which exposes the numerical inaccuracies introduced by the Winograd transformations to the learning of the model parameters, enabling the design of competitive quantized models without impacting model size. We also address the source of the numerical error and propose a relaxation on the form of the transformation matrices, resulting in up to 10% higher classification accuracy on CIFAR-10. Finally, we propose wiNAS, a neural architecture search (NAS) framework that jointly optimizes a given macro-architecture for accuracy and latency leveraging Winograd-aware layers. A Winograd-aware ResNet-18 optimized with wiNAS for CIFAR-10 results in 2.66&#215; speedup compared to im2row, one of the most widely used optimized convolution implementations, with no loss in accuracy.</description>
+    </item>
+    
+    <item>
+        <title>AutoPhase: Juggling HLS Phase Orderings in Random Forests with Deep Reinforcement Learning</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/4e732ced3463d06de0ca9a15b6153677-Paper.pdf</link>
+        <description>The performance of the code a compiler generates depends on the order in which it applies the optimization passes. 
+Choosing a good order--often referred to as the {\em phase-ordering} problem--is an NP-hard problem. As a result, existing solutions rely on a variety of heuristics.
+In this paper, we evaluate a new technique to address the phase-ordering problem: deep reinforcement learning.
+To this end, we implement a framework that takes a program and finds a sequence of passes that optimize the performance of the generated circuit. 
+Without loss of generality, we instantiate this framework in the context of an LLVM compiler and target high-level synthesis programs. 
+We use random forests to quantify the correlation between the effectiveness of a given pass and the program's features. This helps us reduce the search space by avoiding orderings that are unlikely to improve the performance of a given program. 
+We compare the performance of deep reinforcement learning to state-of-the-art algorithms that address the phase-ordering problem.
+In our evaluation, we show that reinforcement learning improves circuit performance by 28\%
+when compared to using the -O3 compiler flag, and it achieves competitive results compared to the state-of-the-art solutions, while requiring fewer samples. 
+More importantly, unlike existing state-of-the-art solutions, our reinforcement learning solution can generalize to more than 12,000 different programs after training on as few as a hundred programs for less than ten minutes.</description>
+    </item>
+    
+    <item>
+        <title>SLIDE : In Defense of Smart Algorithms over Hardware Acceleration for Large-Scale Deep Learning Systems</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/65b9eea6e1cc6bb9f0cd2a47751a186f-Paper.pdf</link>
+        <description>Deep Learning (DL) algorithms are the central focus of modern machine learning systems. As data volumes keep growing, it has become customary to train large neural networks with hundreds of millions of parameters to maintain enough capacity to memorize these volumes and obtain state-of-the-art accuracy. To get around the costly computations associated with large models and data, the community is increasingly investing in specialized hardware for model training. However, specialized hardware is expensive and hard to generalize to a multitude of tasks. The progress on the algorithmic front has failed to demonstrate a direct advantage over powerful hardware such as NVIDIA-V100 GPUs. This paper provides an exception. We propose SLIDE (Sub-LInear Deep learning Engine) that uniquely blends smart randomized algorithms, with multi-core parallelism and workload optimization. Using just a CPU, SLIDE drastically reduces the computations during both training and inference outperforming an optimized implementation of Tensorflow (TF) on the best available GPU. Our evaluations on industry-scale recommendation datasets, with large fully connected architectures, show that training with SLIDE on a 44 core CPU is more than 3.5 times (1 hour vs. 3.5 hours) faster than the same network trained using TF on Tesla V100 at any given accuracy level. On the same CPU hardware, SLIDE is over 10x faster than TF. We provide codes and scripts for reproducibility.</description>
+    </item>
+    
+    <item>
+        <title>MNN: A Universal and Efficient Inference Engine</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/8f14e45fceea167a5a36dedd4bea2543-Paper.pdf</link>
+        <description>Deploying deep learning (DL) models on mobile devices draws more and more attention recently. However, designing an efficient inference engine on devices is under the great challenges of model compatibility, device diversity, and resource limitation. To deal with these challenges, we propose Mobile Neural Network (MNN), a universal and efficient inference engine tailored to mobile applications. In this paper, the contributions of MNN include: (1) presenting a mechanism called pre-inference that manages to conduct runtime optimization; (2) delivering thorough kernel optimization on operators to achieve optimal computation performance; (3) introducing backend abstraction module which enables hybrid scheduling and keeps the engine lightweight. Extensive benchmark experiments demonstrate that MNN performs favorably against other popular lightweight
+DL frameworks.</description>
+    </item>
+    
+    <item>
+        <title>Predictive Precompute with Recurrent Neural Networks</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/8f53295a73878494e9bc8dd6c3c7104f-Paper.pdf</link>
+        <description>In both mobile and web applications, speeding up user interface response times can often lead to significant improvements in user engagement. A common technique to improve responsiveness is to precompute data ahead of time for specific features. However, simply precomputing data for all user and feature combinations is prohibitive at scale due to both network constraints and server-side computational costs. It is therefore important to accurately predict per-user feature usage in order to minimize wasted precomputation (an approach we call &#8220;predictive precompute&#8221;). In this paper, we describe the novel application of recurrent neural networks (RNNs) for predictive precompute. We compare their performance with traditional machine learning models, and share findings from their use in large-scale production systems. We demonstrate that RNN models improve prediction accuracy, eliminate most feature engineering steps, and reduce the computational cost of serving predictions by an order of magnitude.</description>
+    </item>
+    
+    <item>
+        <title>OPTIMUS: OPTImized matrix MUltiplication Structure for Transformer neural network accelerator</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/903ce9225fca3e988c2af215d4e544d3-Paper.pdf</link>
+        <description>We present a high-performance Transformer neural network inference accelerator named OPTIMUS. Optimus has several features for performance enhancement such as the redundant computation skipping method to accelerate the decoding process and the Set-Associative RCSC (SA-RCSC) sparse matrix format to maintain high utilization even when a large number of MACs are used in hardware.  OPTIMUS also has a flexible hardware architecture to support diverse matrix multiplications and it keeps all the intermediate computation values fully local and completely eliminates the DRAM access to achieve exceptionally fast single batch inference.  It also reduces the data transfer overhead by carefully matching the data compute and load cycles.  The simulation using the WMT15 (EN-DE) dataset shows that latency of OPTIMUS is 41.62&#215;, 24.23&#215;, 16.01&#215; smaller than that of Intel(R) i7 6900K CPU, NVIDIA Titan Xp GPU, and the baseline custom hardware, respectively. In addition, the throughput of OPTIMUS is 43.35&#215;, 25.45&#215; and 19.00&#215; higher and the energy efficiency of OPTIMUS is 2393.85&#215;, 1464&#215; and 19.01&#215; better than that of CPU, GPU and the baseline custom hardware, respectively.</description>
+    </item>
+    
+    <item>
+        <title>SkyNet: a Hardware-Efficient Method for Object Detection and Tracking on Embedded Systems</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/93db85ed909c13838ff95ccfa94cebd9-Paper.pdf</link>
+        <description>Developing object detection and tracking on resource-constrained embedded systems is challenging. While object detection is one of the most compute-intensive tasks from the artificial intelligence domain, it is only allowed to use limited computation and memory resources on embedded devices. In the meanwhile, such resource-constrained implementations are often required to satisfy additional demanding requirements such as real-time response, high-throughput performance, and reliable inference accuracy. To overcome these challenges, we propose SkyNet, a hardware-efficient method to deliver the state-of-the-art detection accuracy and speed for embedded systems. Instead of following the common top-down flow for compact DNN design, SkyNet provides a bottom-up DNN design approach with comprehensive understanding of the hardware constraints at the very beginning to deliver hardware-efficient DNNs. The effectiveness of SkyNet is demonstrated by winning the extremely competitive System Design Contest for low power object detection in the 56th IEEE/ACM Design Automation Conference (DAC-SDC), where our SkyNet significantly outperforms all other 100+ competitors: it delivers 0.731 Intersection over Union (IoU) and 67.33 frames per second (FPS) on a TX2 embedded GPU; and 0.716 IoU and 25.05 FPS on an Ultra96 embedded FPGA. The evaluation of SkyNet is also extended to GOT-10K, a recent large-scale high-diversity benchmark for generic object tracking in the wild. For state-of-the-art object trackers SiamRPN++ and SiamMask, where ResNet-50 is employed as the backbone, implementations using our SkyNet as the backbone DNN are 1.60X and 1.73X faster with better or similar accuracy when running on a 1080Ti GPU, and 37.20X smaller in terms of parameter size for significantly better memory and storage footprint.</description>
+    </item>
+    
+    <item>
+        <title>BPPSA: Scaling Back-propagation by Parallel Scan Algorithm</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/96da2f590cd7246bbde0051047b0d6f7-Paper.pdf</link>
+        <description>In an era when the performance of a single compute device plateaus, software must be designed to scale on a massively parallel system for better runtime performance. However, in the context of training deep learning models, the commonly used back-propagation (BP) algorithm imposes a strong sequential dependency in the process of gradient computation. Under model parallelism, BP has a theoretical step complexity of Theta(n) which hinders its scalability in a parallel computing environment, where n represents the number of compute devices into which a model is partitioned.</description>
+    </item>
+    
+    <item>
+        <title>Memory-Driven Mixed Low Precision Quantization for Enabling Deep Network Inference on Microcontrollers</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/9b8619251a19057cff70779273e95aa6-Paper.pdf</link>
+        <description>This paper presents a novel end-to-end methodology for enabling the deployment of high-accuracy deep networks on microcontrollers. To fit within the memory and computational limitations of resource-constrained edge-devices,  we exploit mixed low-bitwidth compression, featuring 8, 4 or 2-bit uniform quantization, and we model the inference graph with integer-only operations. 
+Our approach aims at determining the minimum bit precision of every activation and weight tensor given the memory constraints of a device. This is achieved through a rule-based iterative procedure, which cuts the number of bits of the most memory-demanding layers, aiming at meeting the memory constraints. After a quantization-aware retraining step, the fake-quantized graph is converted into an inference integer-only model by inserting the Integer Channel-Normalization (ICN) layers, which introduce a negligible loss as demonstrated on INT4 MobilenetV1 models. We report the latency-accuracy evaluation of mixed-precision MobilenetV1 family networks on a STM32H7 microcontroller. Our experimental results demonstrate an end-to-end deployment of an integer-only Mobilenet network with Top1 accuracy of 68% on a device with only 2MB of FLASH memory and 512kB of RAM, improving by 8% the Top1 accuracy with respect to previously published 8 bit implementations for microcontrollers.</description>
+    </item>
+    
+    <item>
+        <title>Ordering Chaos: Memory-Aware Scheduling of Irregularly Wired Neural Networks for Edge Devices</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/9bf31c7ff062936a96d3c8bd1f8f2ff3-Paper.pdf</link>
+        <description>Recent advances demonstrate that irregularly wired neural networks from Neural Architecture Search (NAS) and Random Wiring can not only automate the design of deep neural networks but also emit models that outperform previous manual designs. These designs are especially effective while designing neural architectures under hard resource constraints (memory, MACs, . . . ) which highlights the importance of this class of designing neural networks. However, such a move creates complication in the previously streamlined pattern of execution. In fact one of the main challenges is that the order of such nodes in the neural network significantly effects the memory footprint of the intermediate activations. Current compilers do not schedule with regard to activation memory footprint that it significantly increases its peak compared to the optimum, rendering it not applicable for edge devices. To address this standing issue, we present a memory-aware compiler, dubbed SERENITY, that utilizes dynamic programming to find a sequence that finds a schedule with optimal memory footprint. Our solution also comprises of graph rewriting technique that allows further reduction beyond the optimum. As such, SERENITY achieves optimal peak memory, and the graph rewriting technique further improves this resulting in 1.68&#215; improvement with dynamic programming-based scheduler and 1.86&#215; with graph rewriting, against TensorFlow Lite with less than one minute overhead.</description>
+    </item>
+    
+    <item>
+        <title>Model Assertions for Monitoring and Improving ML Models</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/a2557a7b2e94197ff767970b67041697-Paper.pdf</link>
+        <description>Machine learning models are increasingly deployed in mission-critical settings
+such as vehicles, but unfortunately, these models can fail in complex ways.  To
+prevent errors, ML engineering teams monitor and continuously improve these
+models.  We propose a new abstraction, model assertions, that adapts the
+classical use of program assertions as a way to monitor and improve ML models.
+Model assertions are arbitrary functions over the model's input and output that
+indicates when errors may be occurring.  For example, a developer may write an
+assertion that an object's class should stay the same across frames of video.
+Once written, these assertions can be used both for runtime monitoring and for
+improving a model at training time.  In particular, we show that at runtime,
+model assertions can find high confidence errors, where a model returns
+the wrong output with high confidence, which uncertainty-based monitoring
+techniques would not detect.  We also propose two methods to use model
+assertions at training time.  First, we propose a bandit-based active learning
+algorithm that can sample from data flagged by assertions and show that it can
+reduce labeling costs by up to 33% over traditional uncertainty-based methods.
+Second, we propose an API for generating "consistency assertions" (e.g., the
+class change example) and weak labels for inputs where the consistency
+assertions fail, and show that these weak labels can improve relative model
+quality by up to 46%.  We evaluate both algorithms on four real-world tasks
+with video, LIDAR, and ECG data.</description>
+    </item>
+    
+    <item>
+        <title>A Systematic Methodology for Analysis of Deep Learning Hardware and Software Platforms</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/c20ad4d76fe97759aa27a0c99bff6710-Paper.pdf</link>
+        <description>Training deep learning models is compute-intensive and there is an industry-wide trend towards hardware and software specialization to improve performance. To systematically compare deep learning systems, we introduce a methodology comprised of a set of analysis techniques and parameterized end-to-end models for fully connected, convolutional, and recurrent neural networks. This methodology can be applied to analyze various hardware and software systems, and is intended to complement traditional methods. We demonstrate its utility by comparing two generations of specialized platforms (Google's Cloud TPU v2/v3), three heterogeneous platforms (Google TPU, Nvidia GPU, and Intel CPU), and specialized software stacks (TensorFlow and CUDA).</description>
+    </item>
+    
+    <item>
+        <title>Sense  Sensitivities: The Path to General-Purpose Algorithmic Differentiation</title>
+        <link>https://proceedings.mlsys.org/paper/2020</link>
+        <description>list index out of range</description>
+    </item>
+    
+    <item>
+        <title>Understanding the Downstream Instability of Word Embeddings</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/c9e1074f5b3f9fc8ea15d152add07294-Paper.pdf</link>
+        <description>Many industrial machine learning (ML) systems require frequent retraining to keep up-to-date with constantly changing data. This retraining exacerbates a large challenge facing ML systems today: model training is unstable, i.e., small changes in training data can cause significant changes in the models predictions. In this paper, we work on developing a deeper understanding of this instability, with a focus on how a core building block of modern natural language processing (NLP) pipelines---pre-trained word embeddings---affects the instability of downstream NLP models. We first empirically reveal a tradeoff between stability and memory: increasing the embedding memory 2x can reduce the disagreement in predictions due to small changes in training data by 5% to 39% (relative). To theoretically explain this tradeoff, we introduce a new measure of embedding instability---the eigenspace instability measure. We relate the eigenspace instability measure to downstream instability by proving a bound on the disagreement in downstream predictions introduced by the change in word embeddings. Practically, we show that the eigenspace instability measure can be a cost-effective way to choose embedding parameters to minimize instability without training downstream models, achieving up to 3.71x lower error rates than existing embedding distance measures. Finally, we demonstrate that the observed stability-memory tradeoffs extend to other types of embeddings as well, including knowledge graph and contextual word embeddings.</description>
+    </item>
+    
+    <item>
+        <title>What is the State of Neural Network Pruning?</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/d2ddea18f00665ce8623e36bd4e3c7c5-Paper.pdf</link>
+        <description>Neural network pruning---the task of reducing the size of a network by removing parameters---has been the subject of a great deal of work in recent years. We provide a meta-analysis of the literature, including an overview of approaches to pruning and consistent findings in the literature. After aggregating results across 81 papers and pruning hundreds of models in controlled conditions, our clearest finding is that the community suffers from a lack of standardized benchmarks and metrics.
+This deficiency is substantial enough that it is hard to compare pruning techniques to one another or determine how much progress the field has made over the past three decades.
+To address this situation, we identify issues with current practices, suggest concrete remedies, and introduce ShrinkBench, an open-source framework to facilitate standardized evaluations of pruning methods.</description>
+    </item>
+    
+    <item>
+        <title>Trained Quantization Thresholds for Accurate and Efficient Fixed-Point Inference of Deep Neural Networks</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/e2c420d928d4bf8ce0ff2ec19b371514-Paper.pdf</link>
+        <description>We propose a method of training quantization thresholds (TQT) for uniform symmetric quantizers using standard backpropagation and gradient descent. Contrary to prior work, we show that a careful analysis of the straight-through estimator for threshold gradients allows for a natural range-precision trade-off leading to better optima. Our quantizers are constrained to use power-of-2 scale-factors and per-tensor scaling of weights and activations to make it amenable for hardware implementations. We present analytical support for the general robustness of our methods and empirically validate them on various CNNs for ImageNet classification. We are able to achieve near-floating-point accuracy on traditionally difficult networks such as MobileNets with less than 5 epochs of quantized (8-bit) retraining. Finally, we present Graffitist, a framework that enables automatic quantization of TensorFlow graphs for TQT.</description>
+    </item>
+    
+    <item>
+        <title>FLEET: Flexible Efficient Ensemble Training for Heterogeneous Deep Neural Networks</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/ed3d2c21991e3bef5e069713af9fa6ca-Paper.pdf</link>
+        <description>Parallel training of an ensemble of Deep Neural Networks (DNN) on a cluster of nodes is an effective approach to shorten the process of neural network architecture search and hyper-parameter tuning for a given learning task. Prior efforts have shown that data sharing, where the common preprocessing operation is shared across the DNN training pipelines, saves computational resources and improves pipeline efficiency. Data sharing strategy, however, performs poorly for a heterogeneous set of DNNs where each DNN has varying computational needs and thus different training rate and convergence speed. This paper proposes FLEET, a flexible ensemble DNN training framework for efficiently training a heterogeneous set of DNNs. We build FLEET via several technical innovations. We theoretically prove that an optimal resource allocation is NP-hard and propose a greedy algorithm to efficiently allocate resources for training each DNN with data sharing. We integrate data-parallel DNN training into ensemble training to mitigate the differences in training rates. We introduce checkpointing into this context to address the issue of different convergence speeds. Experiments show that FLEET significantly improves the training efficiency of DNN ensembles without compromising the quality of the result. </description>
+    </item>
+    
+    <item>
+        <title>A System for Massively Parallel Hyperparameter Tuning</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/f4b9ec30ad9f68f89b29639786cb62ef-Paper.pdf</link>
+        <description>Modern learning models are characterized by large hyperparameter spaces and long training times. These properties, coupled with the rise of parallel computing and the growing demand to productionize machine learning workloads, motivate the need to develop mature hyperparameter optimization functionality in distributed computing settings. We address this challenge by first introducing a simple and robust hyperparameter optimization algorithm called ASHA, which exploits parallelism and aggressive early-stopping to tackle large-scale hyperparameter optimization problems. Our extensive empirical results show that ASHA outperforms existing state-of-the-art hyperparameter optimization methods; scales linearly with the number of workers in distributed settings; and is suitable for massive parallelism, converging to a high quality configuration in half the time taken by Vizier (Google's internal hyperparameter optimization service) in an experiment with 500 workers. We then describe several design decisions we encountered, along with our associated solutions, when integrating ASHA in SystemX, an end-to-end production-quality machine learning system that offers hyperparameter tuning as a service.</description>
+    </item>
+    
+    <item>
+        <title>Fine-Grained GPU Sharing Primitives for Deep Learning Applications</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/f7177163c833dff4b38fc8d2872f1ec6-Paper.pdf</link>
+        <description>Unlike traditional resources such as CPU or the network, modern GPUs do not natively support fine-grained
+sharing primitives. Consequently, implementing common policies such as time-sharing and preemption are
+expensive. Worse, when a deep learning (DL) application cannot completely use a GPU's resources, the GPU
+cannot be efficiently shared between multiple applications, leading to GPU underutilization.
+We present Salus to enable two GPU sharing primitives: fast job switching and memory sharing, to achieve
+fine-grained GPU sharing among multiple DL applications. Salus is an efficient, consolidated execution service
+that exposes the GPU to different DL applications, and enforces fine-grained sharing by performing iteration
+scheduling and addressing associated memory management issues. We show that these primitives can then be
+used to implement flexible sharing policies for various use cases. Our integration of Salus with TensorFlow and
+evaluation on popular DL jobs shows that Salus can improve the average completion time of DL training jobs by
+3.19&#215;, GPU utilization for hyper-parameter tuning by 2.38&#215;, and GPU utilization of DL inference applications
+by 42&#215; over not sharing the GPU and 7&#215; over NVIDIA MPS with small overhead.</description>
+    </item>
+    
+    <item>
+        <title>Distributed Hierarchical GPU Parameter Server for Massive Scale Deep Learning Ads Systems</title>
+        <link>https://proceedings.mlsys.org/paper/2020</link>
+        <description>list index out of range</description>
+    </item>
+    
+    <item>
+        <title>Willump: A Statistically-Aware End-to-end Optimizer for Machine Learning Inference</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/fbd7939d674997cdb4692d34de8633c4-Paper.pdf</link>
+        <description>Systems for performing ML inference are widely deployed today.  However, they typically
+use techniques designed for conventional data serving workloads,
+missing critical opportunities to leverage the statistical nature of ML inference.
+In this paper, we present OptX, an optimizer for ML inference
+that introduces two statistically-motivated optimizations
+targeting ML applications whose performance bottleneck is feature computation.
+First, OptX automatically cascades feature computation.
+OptX classifies most data inputs using only high-value, low-cost features selected by a dataflow analysis
+algorithm and cost model, improving performance by up to 5x without 
+statistically significant accuracy loss.
+Second, OptX accurately approximates ML top-K queries,
+discarding low-scoring inputs with an automatically constructed approximate model then
+ranking the remainder with a more powerful model, improving performance by up to 10x with minimal accuracy loss.
+Both optimizations automatically tune their own parameters to maximize performance while meeting a target accuracy level. 
+OptX combines these novel optimizations with powerful compiler optimizations
+to automatically generate fast inference code for ML applications.
+We show that OptX improves the end-to-end performance of real-world ML inference pipelines curated
+from major data science competitions by up to 16x without statistically significant loss of accuracy.</description>
+    </item>
+    
+    <item>
+        <title>Improving the Accuracy, Scalability, and Performance of Graph Neural Networks with Roc</title>
+        <link>https://proceedings.mlsys.org/paper/2020/file/fe9fc289c3ff0af142b6d3bead98a923-Paper.pdf</link>
+        <description>Graph neural networks (GNNs) have been demonstrated to be an effective model for learning tasks related to graph structured data.
+Different from classical deep neural networks which handle relatively small individual samples, GNNs process very large graphs, which must be partitioned and processed in a distributed manner.
+We present Roc, a distributed multi-GPU framework for fast GNN training and inference on graphs.
+Roc is up to 4.6x faster than existing GNN frameworks on a single machine, and can scale to multiple GPUs on multiple machines.
+This performance gain is mainly enabled by Rocs graph partitioning and memory management optimizations.
+Besides performance acceleration, the better scalability of Roc also enables the exploration of more sophisticated GNN architectures on large, real-world graphs.
+We demonstrate that a class of GNN architectures significantly deeper and larger than the typical two-layer models can achieve new state-of-the-art classification accuracy on the widely used Reddit dataset.</description>
+    </item>
+    
+</channel>
+</rss>
